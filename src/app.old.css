@@ -1,0 +1,654 @@
+
+/* =============================================================================
+ * General
+ * ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+h2 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+h3 {
+  margin-top: 24px;
+  font-size: 20px;
+}
+h4, h5, h6 {
+  margin-top: 16px;
+  font-size: 16px;
+}
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #454441;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  cursor: pointer;
+  box-sizing: border-box;
+}
+a,
+a:active,
+a:focus {
+  color: #00b0e9;
+}
+a:hover {
+  color: #00c1ff;
+  text-decoration: none;
+}
+
+hr {
+  position: relative;
+  border-top: 3px solid #d3d3d3;
+  margin: 25px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+p {
+  margin: 0;
+}
+
+html {
+  background: #ffffff;
+}
+
+body {
+  color: #212e31;
+  font-size: 13px;
+  line-height: 20px;
+  overflow-x: hidden;
+  min-height: 100%;
+  z-index: -2;
+  margin: 0px;
+  background: none;
+}
+
+code {
+  background-color: #D9D9D9;
+  color: #7B7B7B;
+  font-size: 9px;
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,0.1);
+  line-height: 16px;
+}
+
+pre {
+  background: rgba(30,30,30, 0.2);
+  border: 1px solid rgba(20,20,20,0.1);
+  color: #FFF;
+  padding: 10px;
+  border: 0;
+  font-size: 11px;
+  word-wrap: normal;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+abbr[title],
+time[title] {
+  border-bottom: 1px dotted #333;
+}
+
+/* Placeholder text, non-login screen */
+#root input::-moz-placeholder {
+  color: rgba(0,0,0,0.2);
+  font-size: 9px;
+  font-style: italic;
+}
+#root input:-ms-input-placeholder {
+  color: rgba(0,0,0,0.2);
+  font-size: 9px;
+  font-style: italic;
+}
+#root input::-webkit-input-placeholder {
+  color: rgba(0,0,0,0.2);
+  font-size: 9px;
+  font-style: italic;
+}
+
+/* =============================================================================
+ * Fonts, define all here as to maintain gracefull fallbacks
+ * ========================================================================== */
+
+th,
+label,
+.section-title,
+body,
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#branding-text,
+#login-title h1 {
+  font-family: "Righteous", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-family: "Open Sans",Arial,sans-serif;
+}
+
+
+/* =============================================================================
+ * Helpers / Utils
+ * ========================================================================== */
+
+.no-select {
+  user-select: none;
+}
+
+.hidden, .hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.flex {
+  display: flex;
+  flex: auto;
+}
+
+.flex-min {
+  flex: 0 auto !important;
+}
+
+.flex-max {
+  flex: 1 1 auto !important;
+}
+
+.flex-break {
+  flex: 0 0 100%;
+  width: 100%;
+  content: '';
+}
+
+.scroll-y {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+/* =============================================================================
+ * Buttons
+ * ========================================================================== */
+
+/* Default, all medium-dark buttons */
+#root .button {
+  display: inline-block;
+  line-height: 20px;
+  padding: 7px 15px;
+  word-break: break-word;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+
+  color: #ffffff;
+  /*text-shadow: 0 1px 0 rgba(0, 0, 0, .8);*/
+  /*border: 1px solid rgba(0, 0, 0,.8);*/
+  border: none;
+  background: #267d97;
+}
+  .button i {
+    font-size: 14px;
+  }
+  .button.disabled,
+  .button[disabled] {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+  #root .button:hover,
+  #root .button:active,
+  #root .button:focus,
+  #root .button:visited {
+    text-decoration: none;
+    color: #fff;
+  }
+  .button + .button,
+  button + button {
+    margin-left: 10px;
+  }
+  #root .button:visited {
+    color: #ddd;
+  }
+
+/* Primary, all light buttons */
+#root .button-primary {
+  color: #2a384d;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+  border: 1px solid rgba(0,0,0,.9);
+  background: rgba(255, 255, 255, 0.8);
+}
+  #root .button-primary:hover,
+  #root .button-primary:active,
+  #root .button-primary:focus {
+    color: #000;
+  }
+  #root .button-primary:visited {
+  }
+  #root .button-primary:active {
+  }
+
+
+/* =============================================================================
+ * Forms
+ * ========================================================================== */
+
+input:-webkit-autofill, textarea:-webkit-autofill {
+  background: #fff;
+}
+/*body  .input-group label {*/
+body  label {
+  /*background: none;*/
+  /*border: none;*/
+  /*color: #FFF;*/
+  /*font-size: 13px;*/
+
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-size: 15px;
+  margin: 20px 0 15px;
+  color: #666;
+}
+body  .form-control {
+  background: #f8f8f8;
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 11px;
+  font-family: monospace;
+  height: 35px;
+  line-height: 35px;
+  padding: 3px 7px;
+  margin-bottom: 10px;
+}
+body  .form-control:focus {
+  border-color: #00c1ff;
+  outline: 0;
+  box-shadow: none;
+}
+body  input[type=text],
+body  input[type=search],
+body  select {
+  border-radius: 4px;
+}
+body input:-moz-placeholder {
+  color: #999999;
+}
+
+body input[type="reset"] {
+  color: #222;
+}
+body .btn {
+  padding: 6px 12px;
+  font-size: 12px;
+  line-height: 1.428571429;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.button:focus, a:focus {
+  outline: 0;
+}
+
+/* =============================================================================
+ * Common / Shared Layout
+ * ========================================================================== */
+
+#root .table {
+  margin: 0;
+}
+
+.section {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  /*box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.22);*/
+  /*border-radius: 3px;*/
+  /*margin: 5px;*/
+  overflow: hidden;
+
+  /*box-shadow: 1px 1px 0 rgba(0,0,0,.15);*/
+  /*border-radius: 3px;*/
+  /*background: #cccccc;*/
+}
+  .section-title {
+    overflow: hidden;
+    height: 40px;
+    line-height: 40px;
+    flex: 0 0 40px;
+    padding: 0 0 0 15px;
+    font-size: 14px;
+    margin: 0;
+    display: flex;
+
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+
+    color: #257d98;
+  }
+    .section-title-inner {
+      flex: 0 auto;
+      display: block;
+      margin: 0 20px 0 0;
+    }
+    .section-title-toolbar {
+      display: flex;
+      flex: 0 0 auto;
+      margin: 0 15px 0 auto;
+    }
+    .section-title-toolbar a {
+    }
+    .section-title-toolbar a + a {
+      margin-left: 10px;
+    }
+  .section-content {
+    overflow-y: auto;
+  }
+    .section-content .section-title {
+      margin: 10px -5px 0;
+    }
+
+/* =============================================================================
+ * App Layout
+ * ========================================================================== */
+
+body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.flex,
+#app,
+#main,
+#main-wrapper {
+  display: flex;
+  justify-content: flex-start; /* align items in Main Axis */
+  align-items: stretch;        /* align items in Cross Axis */
+  align-content: stretch;      /* extra space in Cross Axis */
+}
+
+#app,
+#main-wrapper {
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#content {
+  order: 2;
+  flex: 1 1;
+  display: flex;
+  overflow: hidden;
+}
+  #content h3 {
+    font-size: 14px;
+    margin: 0;
+    line-height: 14px;
+    text-transform: uppercase;
+  }
+
+  #content p {
+    margin: 10px 0;
+  }
+
+
+/* =============================================================================
+ * Header
+ * ========================================================================== */
+
+#header {
+  display: flex;
+  height: 50px;
+  line-height: 50px;
+  flex: 0 0 60px;
+  order: 1;
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid #a9a9a9;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+    #branding {
+      order: 1;
+      flex: 0 0 auto;
+      position: relative;
+    }
+      #branding-logo, #branding-text {
+        display: block;
+        float: left;
+        overflow: hidden;
+      }
+      #branding-logo {
+        width: 65px;
+        text-align: center;
+        opacity: 0.4;
+      }
+        #branding-logo img {
+
+        }
+      #branding-text {
+        font-size: 25px;
+        text-decoration: inherit;
+        margin: 0 0 0 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 0 5px;
+        line-height: 60px;
+
+        color: #257d98;
+        /*text-shadow: 0 1px 0 rgba(0,0,0,.1);*/
+      }
+      #branding-text span {
+        border-radius: 3px;
+        font-size: 12px;
+        font-family: monospace;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-left: 0;
+        padding: 0px 5px;
+        position: absolute;
+        right: 4px;
+        bottom: 2px;
+        z-index: 2;
+        background: #999;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.6);
+        color: #f1f1f1;
+        height: 20px;
+        line-height: 20px;
+        display: none;
+      }
+
+  #status {
+    display: flex;
+    flex-direction: row;
+    order: 2;
+    padding: 0 10px;
+    font-size: 13px;
+    margin: 10px 10px 5px auto;
+    flex: 0 0 auto;
+
+    background: none;
+    box-shadow: none;
+  }
+    #status div {
+      padding: 0 15px;
+      line-height: 35px;
+      overflow: hidden;
+      flex: 1 1 auto;
+
+      border-right: 1px solid rgba(0, 0, 0, 0.15);
+      /*box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2);*/
+    }
+    #status div:last-child {
+      border-right: 0;
+      box-shadow: none;
+    }
+      #status div i {
+        margin-right: 5px;
+        color: #267d97;
+      }
+
+/* =============================================================================
+ * Common menu items
+ * ========================================================================== */
+
+  .menu-item {
+    font-size: 20px;
+    display: block;
+    font-size: 13px;
+    line-height: 25px;
+    padding: 5px 10px 5px 15px;
+    text-decoration: none;
+    cursor: pointer;
+
+    color: #212e31;
+  }
+  .menu-item:hover,
+  .menu-item.active {
+    text-shadow: none;
+    position: relative;
+    /*border-left: 2px solid;*/
+    /*padding-left: 8px;*/
+
+    color: #212e31;
+  }
+  .menu-item:hover {
+    background: #ebfaff;
+    /*border-left-color: #267d97;*/
+  }
+  .menu-item.active {
+    background: #9cd4e4;
+    /*border-left-color: #1a5263;*/
+  }
+  .menu-item i {
+    font-size: 18px;
+    font-style: normal;
+    position: relative;
+    top: 1px;
+    padding: 1px 6px 0 0;
+  }
+
+/* =============================================================================
+* Main content section
+* ========================================================================== */
+
+#main {
+  order: 2;
+  overflow: hidden;
+  flex: 1 1 100%;
+}
+
+/* =============================================================================
+ * Footer
+ * ========================================================================== */
+
+#footer {
+  display: flex;
+  flex: 0 0 30px;
+  order: 3;
+  flex-flow: row;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #5c7e88;
+  padding: 0 10px;
+  font-size: 11px;
+  font-family: monospace;
+  margin: 3px 10px 6px;
+  display: none;
+}
+  #footer .footer-item {
+    display: flex;
+  }
+  #copyright {
+    margin-left: auto;
+  }
+    i.fa-copyright {
+      color: #000;
+      font-weight: bold;
+    }
+
+/* =============================================================================
+ * Progress bar
+ * ========================================================================== */
+
+@keyframes moving-gradient {
+  0%   { background-position: left bottom; }
+  100% { background-position: right bottom; }
+}
+
+#progress-bar {
+  position: absolute;
+  height: 5px;
+  top: -7px;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #8F8F8F;
+  box-shadow: 0 1px 1px rgba(255,255,255,0.3);
+  background: #00a2d3;
+  transition: top 500ms ease-in-out;
+  animation-delay: 0s;
+}
+  #progress-bar-inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,.25) 50%, rgba(0,0,0,0) 100%);
+    background-size: 50% 100%;
+  }
+  .loading #progress-bar {
+    top: 0;
+    animation-delay: 3s;
+    /*transition-delay: 1s;*/
+  }
+    .loading #progress-bar-inner {
+      animation: moving-gradient 3.18s linear infinite;
+    }
+
+.loading-screen {
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(255,255,255,.4) 50%, rgba(0,0,0,0) 100%);
+    background-size: 50% 100%;
+    animation-name: moving-gradient;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: none;
+}
+  .loading .loading-screen {
+    display: block;
+  }

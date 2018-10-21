@@ -1,0 +1,30 @@
+{
+  "name": "school-project",
+  "author": "Beau Sorensen, Liz Sorensen",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "lint": "eslint ./",
+    "start": "react-scripts start",
+    "build": "npm run test && react-scripts build",
+    "test": "npm run lint && CI=true react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "debug": "2.6.3",
+    "materialize-css": "1.0.0-rc.2",
+    "prop-types": "15.6.0",
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
+    "react-router": "4.0.0",
+    "react-router-dom": "4.0.0",
+    "try-json": "1.0.1",
+    "underscore": "1.8.3",
+    "var-type": "1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "5.1.0",
+    "eslint-plugin-react": "7.10.0",
+    "react-scripts": "0.9.5"
+  }
+}

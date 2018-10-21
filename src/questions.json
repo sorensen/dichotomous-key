@@ -1,0 +1,61 @@
+{
+  "prompt": "How many legs?",
+  "questions": [
+    {
+      "title": "6 Legs",
+      "key": "6-legs"
+    },
+    {
+      "title": "8 Legs",
+      "key": "8-legs",
+      "prompt": "Is the abdomen segmented?",
+      "images": [
+
+      ],
+      "questions": [
+        {
+          "title": "Abdomen Is Obviously Segmented",
+          "key": "is-segmented",
+          "prompt": "Does the abdomen have a stinger?",
+          "questions": [
+            {
+              "title": "Abdomen has stinger",
+              "key": "has-stinger",
+              "answer": "Order Scorpiones"
+            },
+            {
+              "title": "Abdomen doesn't have stinger, and specimen is <5mm",
+              "key": "no-stinger",
+              "answer": "Order Pseudoscorpiones"
+            }
+          ]
+        },
+        {
+          "title": "Abdomen Is Not Segmented",
+          "key": "not-segmented",
+          "prompt": "What about the Petiole?",
+          "questions": [
+            {
+              "title": "There is a petiole between abdomen and cephalothorax",
+              "key": "petiole-cephalothorax",
+              "answer": "Order Araneae (spiders)"
+            },
+            {
+              "title": "There is no petiole",
+              "key": "no-petiole",
+              "answer": "Order Acari (mites and ticks)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "No Legs",
+      "key": "no-legs"
+    },
+    {
+      "title": "Many Legs",
+      "key": "many-legs"
+    }
+  ]
+}
