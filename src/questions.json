@@ -3,14 +3,25 @@
   "questions": [
     {
       "title": "6 Legs",
-      "key": "6-legs"
+      "key": "6-legs",
+      "questions": []
+    },
+    {
+      "title": "0 Legs",
+      "key": "no-legs",
+      "questions": []
     },
     {
       "title": "8 Legs",
       "key": "8-legs",
       "prompt": "Is the abdomen segmented?",
       "images": [
-
+        {
+          "src": "",
+          "title": "",
+          "caption": "",
+          "link": ""
+        }
       ],
       "questions": [
         {
@@ -50,12 +61,9 @@
       ]
     },
     {
-      "title": "No Legs",
-      "key": "no-legs"
-    },
-    {
       "title": "Many Legs",
-      "key": "many-legs"
+      "key": "many-legs",
+      "questions": []
     }
   ]
 }

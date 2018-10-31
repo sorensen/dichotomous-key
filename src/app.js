@@ -4,23 +4,19 @@
  */
 
 const React = require('react')
-const { Route, Redirect, BrowserRouter, NavLink, Link } = require('react-router-dom')
-const _ = require('underscore')
+const { Route, BrowserRouter, NavLink, Link } = require('react-router-dom')
 const debug = require('debug')('app')
-
 const Dashboard = require('./views/dashboard')
 const Search = require('./views/search')
 
-// CSS imports
-require('./app.css')
-require('materialize-css/dist/css/materialize.css')
+/*!
+ * Styles
+ */
 
-// require('./app.css')
+require('materialize-css/dist/css/materialize.css')
+require('./app.css')
 
 /**
- * Primary app wrapper, handles authentication and toggles login overlay with
- * the actual app / layout views. All globals / sharables should be created here
- * and passed down to any child component that needs them.
  *
  */
 
@@ -28,24 +24,7 @@ class App extends React.Component {
 
   constructor(props) {
     super(props)
-
-    _.bindAll(this
-    , 'loading'
-    )
     this.state = {}
-  }
-
-  loading(active) {
-    return new Promise(res => {
-      this.setState({
-        loading: !!active
-      }, () => {
-        if (!active) return res()
-
-        // If activating, wait before resolving so the user can see progress
-        setTimeout(res, 400)
-      })
-    })
   }
 
   render() {
@@ -53,37 +32,34 @@ class App extends React.Component {
 
     return (
       <BrowserRouter>
-        <Route path="/" render={(
-          <div>
-            <nav id="header" className="" key="header">
-              <div className="nav-wrapper">
-                <NavLink to={`/`} id="branding-text" className="brand-logo left">Bug Finder</NavLink>
+        <Route path="/" render={() => (
+          <React.Fragment>
+            <header>
+              <nav className="grey lighten-5">
+                <div className="container nav-wrapper">
+                  <NavLink to={`/`} id="branding-text" className="brand-logo left grey-text text-darken-2">
+                    <i className="material-icons">bug_report</i>Bugs
+                  </NavLink>
 
-                <ul id="nav-mobile" className="right hide-on-small-and-down">
-                  <li><Link to="/search"><i className="material-icons left">search</i>Search</Link></li>
-                  <li><Link to="/glossary"><i className="material-icons left">import_contacts</i>Glossary</Link></li>
-                  <li><Link to="/about"><i className="material-icons left">info</i>About</Link></li>
-                </ul>
-              </div>
-            </nav>
+                  <ul id="nav-mobile" className="right hide-on-medium-and-down">
+                    <li><Link to="/search" className="grey-text text-darken-2"><i className="material-icons left">search</i>Search</Link></li>
+                    <li><Link to="/glossary" className="grey-text text-darken-2"><i className="material-icons left">import_contacts</i>Glossary</Link></li>
+                    <li><Link to="/about" className="grey-text text-darken-2"><i className="material-icons left">info</i>About</Link></li>
+                  </ul>
+                </div>
+              </nav>
+            </header>
 
             <main id="main">
-              <div id="content">
-                <Route path="/" exact={true} component={Dashboard} />
+              <Route path="/" exact={true} component={Dashboard} />
 
-                <Route path="/search/:a?/:b?/:c?/:d?/:e?/:f?/:g?/:h?/:i?/:j?/:k?/:l?/:m?/:n?/:o?/:p?/:q?/:r?/:s?/:t?/:u?/:v?/:w?/:x?/:y?/:z?" render={props => (
-                  <Search
-                    {...props}
-                    sdk={this.props.sdk}
-                    loading={this.props.loading}
-                    alert={this.showAlert}
-                    dialog={this.showDialog}
-                  />
-                )} />
-              </div>
+              <Route
+                path="/search/:a?/:b?/:c?/:d?/:e?/:f?/:g?/:h?/:i?/:j?/:k?/:l?/:m?/:n?/:o?/:p?/:q?/:r?/:s?/:t?/:u?/:v?/:w?/:x?/:y?/:z?"
+                component={Search}
+               />
             </main>
 
-            <footer className="page-footer">
+            <footer className="page-footer light-green">
               <div className="container">
                 <div className="row">
                   <div className="col l6 s12">
@@ -103,12 +79,12 @@ class App extends React.Component {
               </div>
               <div className="footer-copyright">
                 <div className="container">
-                © 2018 Copyright Liz Sorensen
-                <a className="grey-text text-lighten-4 right" href="#!">More Links</a>
+                  © 2018 Copyright Liz Sorensen
+                  <a className="grey-text text-lighten-4 right" href="#!">More Links</a>
                 </div>
               </div>
             </footer>
-          </div>
+          </React.Fragment>
         )} />
       </BrowserRouter>
     )

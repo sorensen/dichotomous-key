@@ -77,26 +77,38 @@ class Settings extends React.Component {
     if (baseRoute) baseRoute += '/'
 
     return (
-      <div id="settings-wrapper" className="flex">
-        <nav id="breadcrumbs">
-          <div className="nav-wrapper">
-            <div className="col s12">
-              {crumbs.map(crumb => (
+      <section id="search">
+        {!crumbs.length ? null :
+          <nav id="breadcrumbs" className="grey lighten-1">
+            <div className="nav-wrapper container">
+              <div className="col s12">
                 <NavLink
-                  to={`/search/${crumb.path}`}
+                  to={`/search`}
                   className="breadcrumb"
                   activeClassName="active"
-                  key={`crumb-${crumb.key}`}
+                  key={`crumb-search`}
                   >
-                  {crumb.key}
+                  Search
                 </NavLink>
-              ))}
+                {crumbs.map(crumb => (
+                  <NavLink
+                    to={`/search/${crumb.path}`}
+                    className="breadcrumb"
+                    activeClassName="active"
+                    key={`crumb-${crumb.key}`}
+                    >
+                    {crumb.key}
+                  </NavLink>
+                ))}
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
+        }
 
         <div className="container">
-          <h3 className="question-title">{active.prompt}</h3>
+          <div className="row">
+            <h5>Search</h5>
+          </div>
 
           {active.answer &&
             <div className="question-answer">
@@ -104,22 +116,36 @@ class Settings extends React.Component {
             </div>
           }
 
-          {questions &&
-            <div className="collection">
-              {questions.map(question => (
-                <NavLink
-                  to={`/search/${baseRoute}${question.key}`}
-                  key={`question-${question.key}`}
-                  className="collection-item waves-effect waves-light btn-large"
-                  activeClassName="active"
-                  >
-                  {question.title}
-                </NavLink>
-              ))}
+          <div className="row">
+            <div className="col s12">
+              <div className="card">
+                <div className="card-content">
+                  <span className="card-title">{active.prompt}</span>
+                  {active.text && (
+                    <p>{active.text}</p>
+                  )}
+                </div>
+                <div className="card-action">
+                  {questions &&
+                    <div className="collection">
+                      {questions.map(question => (
+                        <NavLink
+                          to={`/search/${baseRoute}${question.key}`}
+                          key={`question-${question.key}`}
+                          className="col s12 green darken-2 waves-effect waves-light btn-large"
+                          activeClassName="active"
+                          >
+                          {question.title}
+                        </NavLink>
+                      ))}
+                    </div>
+                  }
+                </div>
+              </div>
             </div>
-          }
+          </div>
         </div>
-      </div>
+      </section>
     )
   }
 }
