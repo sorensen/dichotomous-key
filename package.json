@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint ./",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && mv build docs",
     "test": "npm run lint && CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
