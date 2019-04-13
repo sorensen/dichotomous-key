@@ -7,8 +7,9 @@
   "scripts": {
     "lint": "eslint ./",
     "start": "react-scripts start",
-    "build": "rm -rf docs && react-scripts build && mv build docs",
+    "build": "react-scripts build",
     "test": "npm run lint && CI=true react-scripts test --env=jsdom",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "dependencies": {

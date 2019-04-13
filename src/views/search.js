@@ -143,7 +143,7 @@ class Settings extends React.Component {
         {pics.map(pic =>
           <img
             key={pic.filename}
-            src={`/img/${pic.filename}`}
+            src={process.env.PUBLIC_URL + `/img/${pic.filename}`}
             height={200}
           />
         )}

@@ -32,8 +32,10 @@ class App extends React.Component {
   render() {
     debug('[App.render] state=`%j`', this.state)
 
+    // '/dichotomous-key'
+    console.log('public url: ', process.env.PUBLIC_URL)
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Route path="/" render={() => (
           <React.Fragment>
             <header>

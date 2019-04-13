@@ -10,6 +10,8 @@ NOTES.md
 /coverage
 
 # production
+/build
+build.tar.gz
 
 # misc
 config/local.json
