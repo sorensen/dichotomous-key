@@ -4,7 +4,7 @@
  */
 
 import React from 'react'
-import { Route, BrowserRouter, NavLink, Link } from 'react-router-dom'
+import { Route, HashRouter, NavLink, Link } from 'react-router-dom'
 import { debug as _debug } from 'debug'
 import Home from './views/home'
 import Glossary from './views/glossary'
@@ -32,17 +32,16 @@ class App extends React.Component {
   render() {
     debug('[App.render] state=`%j`', this.state)
 
-    // '/dichotomous-key'
-    console.log('public url: ', process.env.PUBLIC_URL)
     return (
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter basename={process.env.PUBLIC_URL}>
         <Route path="/" render={() => (
           <React.Fragment>
             <header>
-              <nav className="grey lighten-5">
+              <nav className="light-green">
                 <div className="nav-wrapper">
-                  <NavLink to={'/'} id="branding-text" className="brand-logo grey-text text-darken-3">
-                    <i className="material-icons">bug_report</i>Bugs
+                  <NavLink to={'/'} id="branding-text" className="brand-logo">
+                    <i className="logo-icon material-icons">bug_report</i>
+                    <span className="logo-text">Bugs</span>
                   </NavLink>
 
                   <a href="#" data-target="mobile-nav" className="sidenav-trigger"><i className="material-icons">menu</i></a>
@@ -72,7 +71,7 @@ class App extends React.Component {
             </main>
 
             <footer className="page-footer light-green">
-              <div className="container">
+              <div className="container hidden">
                 <div className="row">
                   <div className="col l6 s12">
                     <h5 className="white-text">Footer Content</h5>
@@ -98,7 +97,7 @@ class App extends React.Component {
             </footer>
           </React.Fragment>
         )} />
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 }

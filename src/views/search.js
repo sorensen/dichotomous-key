@@ -79,29 +79,6 @@ class Settings extends React.Component {
     })
   }
 
-  getLinks() {
-    const { active } = this.state.data
-    const { items } = active || {}
-
-    if (!items) return null
-
-    return items.map(item => {
-      let title = item.title
-
-      for (const def of glossary) {
-        const word = def.word
-        const regex = new RegExp(word, 'ig')
-
-        title = title.replace(regex, <a href={`/glossary/#${word}`}>{word}</a>)
-      }
-
-      return {
-        ...item,
-        title,
-      }
-    })
-  }
-
   renderTitle(title) {
     for (const def of glossary) {
       const word = def.word
@@ -110,7 +87,7 @@ class Settings extends React.Component {
       title = reactStringReplace(title, regex, (match, i) => {
         return (
           <React.Fragment key={`${word}-${i}`}>
-            <a href={`/glossary/#${word}`}>{word}</a>
+            <NavLink to={`/glossary/#${word}`}>{word}</NavLink>
             <span>{match}</span>
           </React.Fragment>
         )
@@ -137,9 +114,10 @@ class Settings extends React.Component {
 
   renderPictures(item) {
     const pics = this.getPictures(item)
+    if (!pics.length) return null
 
     return (
-      <React.Fragment>
+      <div className="question-pics">
         {pics.map(pic =>
           <img
             key={pic.filename}
@@ -147,36 +125,23 @@ class Settings extends React.Component {
             height={200}
           />
         )}
-      </React.Fragment>
+      </div>
     )
-  }
-
-  getActive() {
-    const active = this.state.data.active || {}
-    const items = this.getLinks()
-
-    return {
-      ...active,
-      items,
-    }
   }
 
   render() {
     const { active, history } = this.state.data
-
-    // const active = this.getActive()
     const { items } = active || {}
     const crumbs = this.getBreadcrumbs(history)
-    const defaultPrompt = 'Choose one of the following'
 
     let baseRoute = history.map(h => h.key).join('/')
     if (baseRoute) baseRoute += '/'
 
     return (
       <section id="search">
-        {crumbs.length
+        {!crumbs.length
           ? null
-          : <nav id="breadcrumbs" className="grey lighten-1">
+          : <nav id="breadcrumbs" className="hidden grey lighten-1">
             <div className="nav-wrapper container">
               <div className="col s12">
                 <NavLink
@@ -203,7 +168,6 @@ class Settings extends React.Component {
         }
 
         <div className="container">
-
           {active.answer
             && <div className="question-answer">
               <h4>Answer: {active.answer}</h4>
@@ -215,27 +179,33 @@ class Settings extends React.Component {
             ? null
             : <div className="row">
               <div className="col s12">
-                <div className="card">
-                  <div className="card-content">
-                    <span className="card-title">{active.prompt || defaultPrompt}</span>
-                    {active.text && <p>{active.text}</p>}
-                  </div>
-                  <div className="card-action">
-                    {items && items.map(item =>
-                      <div className="collection" key={`question-${item.key}`}>
-                        <p>{this.renderTitle(item.title)}</p>
-                        <p>{this.renderPictures(item)}</p>
+                <h5 className="card-title">
+                  Choose one of the following
+                </h5>
 
-                        <NavLink
-                          to={`/search/${baseRoute}${item.key}`}
-                          className="col s12 green darken-2 waves-effect waves-light btn-large"
-                          activeClassName="active"
-                        >
-                          Choose
-                        </NavLink>
+                <div className="question-wrapper">
+                  {items && items.map(item =>
+                    <div className="card" key={`question-${item.key}`}>
+                      <div className="card-content">
+                        <p className="question-title">
+                          {this.renderTitle(item.title)}
+                        </p>
+
+                        {this.renderPictures(item)}
+
+                        <div className="question-button">
+                          <NavLink
+                            to={`/search/${baseRoute}${item.key}`}
+                            className="light-green darken-2 waves-effect waves-light btn-large btn-floating"
+                            activeClassName="active"
+                          >
+                            <i className="material-icons">check</i>
+                          </NavLink>
+                        </div>
                       </div>
-                    )}
-                  </div>
+                    </div>
+                  )}
+
                 </div>
               </div>
             </div>
