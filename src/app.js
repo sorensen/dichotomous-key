@@ -6,7 +6,8 @@
 const React = require('react')
 const { Route, BrowserRouter, NavLink, Link } = require('react-router-dom')
 const debug = require('debug')('app')
-const Dashboard = require('./views/dashboard')
+const Home = require('./views/home')
+const Glossary = require('./views/glossary')
 const Search = require('./views/search')
 
 /*!
@@ -21,7 +22,6 @@ require('./app.css')
  */
 
 class App extends React.Component {
-
   constructor(props) {
     super(props)
     this.state = {}
@@ -35,28 +35,35 @@ class App extends React.Component {
         <Route path="/" render={() => (
           <React.Fragment>
             <header>
-              <nav className="grey lighten-5">
-                <div className="container nav-wrapper">
-                  <NavLink to={`/`} id="branding-text" className="brand-logo left grey-text text-darken-2">
-                    <i className="material-icons">bug_report</i>Bugs
-                  </NavLink>
-
-                  <ul id="nav-mobile" className="right hide-on-medium-and-down">
-                    <li><Link to="/search" className="grey-text text-darken-2"><i className="material-icons left">search</i>Search</Link></li>
-                    <li><Link to="/glossary" className="grey-text text-darken-2"><i className="material-icons left">import_contacts</i>Glossary</Link></li>
-                    <li><Link to="/about" className="grey-text text-darken-2"><i className="material-icons left">info</i>About</Link></li>
+              <nav>
+                <div className="nav-wrapper">
+                  <a href="#!" className="brand-logo">Logo</a>
+                  <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+                  <ul className="right hide-on-med-and-down">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">Javascript</a></li>
+                    <li><a href="mobile.html">Mobile</a></li>
                   </ul>
                 </div>
               </nav>
+
+              <ul className="sidenav" id="mobile-demo">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">Javascript</a></li>
+                <li><a href="mobile.html">Mobile</a></li>
+              </ul>
             </header>
 
             <main id="main">
-              <Route path="/" exact={true} component={Dashboard} />
+              <Route path="/" exact={true} component={Home} />
+              <Route path="/glossary" exact={false} component={Glossary} />
 
               <Route
                 path="/search/:a?/:b?/:c?/:d?/:e?/:f?/:g?/:h?/:i?/:j?/:k?/:l?/:m?/:n?/:o?/:p?/:q?/:r?/:s?/:t?/:u?/:v?/:w?/:x?/:y?/:z?"
                 component={Search}
-               />
+              />
             </main>
 
             <footer className="page-footer light-green">
@@ -79,7 +86,7 @@ class App extends React.Component {
               </div>
               <div className="footer-copyright">
                 <div className="container">
-                  © 2018 Copyright Liz Sorensen
+                  © 2019 Copyright Liz Sorensen
                   <a className="grey-text text-lighten-4 right" href="#!">More Links</a>
                 </div>
               </div>

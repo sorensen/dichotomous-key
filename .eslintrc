@@ -3,16 +3,67 @@
     "eslint:recommended",
     "plugin:react/recommended"
   ],
-  "rules": {
-    "semi": ["error", "never"],
-    "react/prop-types": 0
-  },
   "env": {
     "node": true,
     "es6": true
   },
   "parserOptions": {
-    "ecmaVersion": 8,
+    "ecmaVersion": 2018,
     "sourceType": "module"
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "indent": ["error", 2],
+    "quotes": ["error", "single", {
+      "avoidEscape": true
+    }],
+    "prefer-const": "error",
+    "no-var": "error",
+    "one-var": ["error", "never"],
+    "max-len": ["warn", 300],
+    "comma-style": ["error", "last"],
+    "comma-dangle": ["error", "always-multiline"],
+    "comma-spacing": ["error", {
+      "before": false,
+      "after": true
+    }],
+    "operator-linebreak": ["error", "before"],
+    "no-extra-parens": [0, "all", {
+      "conditionalAssign": false,
+      "returnAssign": false,
+      "nestedBinaryExpressions": false,
+      "enforceForArrowConditionals": false
+    }],
+    "newline-per-chained-call": ["error", {
+      "ignoreChainWithDepth": 2
+    }],
+    "multiline-ternary": ["error", "always-multiline"],
+    "no-multiple-empty-lines": ["error", {
+      "max": 1
+    }],
+    "arrow-parens": ["error", "as-needed"],
+    "padded-blocks": ["error", "never"],
+    "space-before-function-paren": ["error", {
+      "anonymous": "never",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "keyword-spacing": ["error", {
+      "before": true,
+      "after": true
+    }],
+    "space-in-parens": ["error", "never"],
+    "no-confusing-arrow": ["error", {
+      "allowParens": true
+    }],
+    "consistent-return": "error",
+    "no-multi-spaces": ["error", {
+      "ignoreEOLComments": true
+    }],
+    "lines-around-comment": ["error", {
+      "allowBlockStart": true,
+      "beforeLineComment": true
+    }],
+    "react/prop-types": "warn"
   }
 }
