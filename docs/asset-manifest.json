@@ -1,15 +1,15 @@
 {
-  "main.css": "/static/css/main.c4935469.chunk.css",
-  "main.js": "/static/js/main.1ce217e6.chunk.js",
-  "main.js.map": "/static/js/main.1ce217e6.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-  "static/css/2.ce15d930.chunk.css": "/static/css/2.ce15d930.chunk.css",
-  "static/js/2.3e4d228e.chunk.js": "/static/js/2.3e4d228e.chunk.js",
-  "static/js/2.3e4d228e.chunk.js.map": "/static/js/2.3e4d228e.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.162d85133a2ef6c9f803cd34335e2b39.js": "/precache-manifest.162d85133a2ef6c9f803cd34335e2b39.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/2.ce15d930.chunk.css.map": "/static/css/2.ce15d930.chunk.css.map",
-  "static/css/main.c4935469.chunk.css.map": "/static/css/main.c4935469.chunk.css.map"
+  "main.css": "/dichotomous-key/static/css/main.c4935469.chunk.css",
+  "main.js": "/dichotomous-key/static/js/main.1ce217e6.chunk.js",
+  "main.js.map": "/dichotomous-key/static/js/main.1ce217e6.chunk.js.map",
+  "runtime~main.js": "/dichotomous-key/static/js/runtime~main.475713f0.js",
+  "runtime~main.js.map": "/dichotomous-key/static/js/runtime~main.475713f0.js.map",
+  "static/css/2.ce15d930.chunk.css": "/dichotomous-key/static/css/2.ce15d930.chunk.css",
+  "static/js/2.15104c12.chunk.js": "/dichotomous-key/static/js/2.15104c12.chunk.js",
+  "static/js/2.15104c12.chunk.js.map": "/dichotomous-key/static/js/2.15104c12.chunk.js.map",
+  "index.html": "/dichotomous-key/index.html",
+  "precache-manifest.05873dc8a888558a49eba12446b5da4c.js": "/dichotomous-key/precache-manifest.05873dc8a888558a49eba12446b5da4c.js",
+  "service-worker.js": "/dichotomous-key/service-worker.js",
+  "static/css/2.ce15d930.chunk.css.map": "/dichotomous-key/static/css/2.ce15d930.chunk.css.map",
+  "static/css/main.c4935469.chunk.css.map": "/dichotomous-key/static/css/main.c4935469.chunk.css.map"
 }

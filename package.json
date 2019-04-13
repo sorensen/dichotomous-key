@@ -3,6 +3,7 @@
   "author": "Beau Sorensen, Liz Sorensen",
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://sorensen.github.io/dichotomous-key/",
   "scripts": {
     "lint": "eslint ./",
     "start": "react-scripts start",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "eslint": "5.12.0",
     "eslint-plugin-react": "7.10.0",
+    "gh-pages": "2.0.1",
     "react-scripts": "2.1.8"
   },
   "browserslist": [
