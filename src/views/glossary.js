@@ -3,9 +3,9 @@
  * Dependencies
  */
 
-const React = require('react')
-const { NavLink } = require('react-router-dom')
-const glossary = require('../data/glossary')
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import glossary from '../data/glossary'
 
 /**
  * Home sub-view
@@ -36,4 +36,4 @@ class Glossary extends React.Component {
  * Exports
  */
 
-module.exports = Glossary
+export default Glossary

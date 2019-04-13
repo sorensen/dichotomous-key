@@ -3,8 +3,8 @@
  * Dependencies
  */
 
-const React = require('react')
-const { NavLink } = require('react-router-dom')
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 /*!
  * Link component
@@ -33,4 +33,4 @@ class Link extends React.Component {
  * Exports
  */
 
-module.exports = Link
+export default Link

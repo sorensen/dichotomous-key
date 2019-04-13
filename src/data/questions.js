@@ -1183,8 +1183,4 @@ questions.items.forEach(validate)
  * Exports
  */
 
-module.exports = questions
-
-
-
-// 93?
+export default questions

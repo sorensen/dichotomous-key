@@ -1,10 +1,10 @@
 /* eslint-env node, browser */
 
-const React = require('react')
-const ReactDOM = require('react-dom')
-const App = require('./app')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './app'
 
 document.addEventListener('DOMContentLoaded', () => {
   window.M.AutoInit()
 })
-window.App = ReactDOM.render(<App />, document.getElementById('body'))
+ReactDOM.render(<App />, document.getElementById('body'))

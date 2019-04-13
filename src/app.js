@@ -3,19 +3,21 @@
  * Dependencies
  */
 
-const React = require('react')
-const { Route, BrowserRouter, NavLink, Link } = require('react-router-dom')
-const debug = require('debug')('app')
-const Home = require('./views/home')
-const Glossary = require('./views/glossary')
-const Search = require('./views/search')
+import React from 'react'
+import { Route, BrowserRouter, NavLink, Link } from 'react-router-dom'
+import { debug as _debug } from 'debug'
+import Home from './views/home'
+import Glossary from './views/glossary'
+import Search from './views/search'
 
 /*!
  * Styles
  */
 
-require('materialize-css/dist/css/materialize.css')
-require('./app.css')
+import 'materialize-css/dist/css/materialize.css'
+import './app.css'
+
+const debug = _debug('app')
 
 /**
  *
@@ -35,9 +37,9 @@ class App extends React.Component {
         <Route path="/" render={() => (
           <React.Fragment>
             <header>
-              <nav>
+              <nav className="grey lighten-5">
                 <div className="nav-wrapper">
-                  <NavLink to={'/'} id="branding-text" className="brand-logo">
+                  <NavLink to={'/'} id="branding-text" className="brand-logo grey-text text-darken-3">
                     <i className="material-icons">bug_report</i>Bugs
                   </NavLink>
 
@@ -103,4 +105,4 @@ class App extends React.Component {
  * Exports
  */
 
-module.exports = App
+export default App

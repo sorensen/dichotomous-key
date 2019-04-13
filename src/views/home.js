@@ -3,8 +3,8 @@
  * Dependencies
  */
 
-const React = require('react')
-const { NavLink } = require('react-router-dom')
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 /**
  * Home sub-view
@@ -69,4 +69,4 @@ class Home extends React.Component {
  * Exports
  */
 
-module.exports = Home
+export default Home

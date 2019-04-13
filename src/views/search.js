@@ -5,20 +5,17 @@
  * Dependencies
  */
 
-const React = require('react')
-const { NavLink } = require('react-router-dom')
-const reactStringReplace = require('react-string-replace')
-const _ = require('underscore')
-const debug = require('debug')('views:search')
-require('./search.css')
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import reactStringReplace from 'react-string-replace'
+import _ from 'underscore'
+import { debug as _debug } from 'debug'
+import './search.css'
+import questions from '../data/questions'
+import glossary from '../data/glossary'
+import pictures from '../data/pictures'
 
-/*!
- * Raw data
- */
-
-const questions = require('../data/questions')
-const glossary = require('../data/glossary')
-const pictures = require('../data/pictures')
+const debug = _debug('views:search')
 
 const glossaryMap = _.indexBy(glossary, 'word')
 
@@ -253,4 +250,4 @@ class Settings extends React.Component {
  * Exports
  */
 
-module.exports = Settings
+export default Settings
