@@ -4,7 +4,7 @@ module.exports = [
   {
     'word': 'Antennae',
     'definition': 'Singular: antenna, when used in a description: antennal (e.g. antennal segments). There are many types of antennae. Antennae are located on an insects head, and give the insect sensory information.',
-    'reference': 1,
+    
   },
   {
     'word': 'Caudal filament',

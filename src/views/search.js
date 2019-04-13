@@ -175,11 +175,9 @@ class Settings extends React.Component {
     let baseRoute = history.map(h => h.key).join('/')
     if (baseRoute) baseRoute += '/'
 
-    console.log('active: ', active)
-
     return (
       <section id="search">
-        {!crumbs.length
+        {crumbs.length
           ? null
           : <nav id="breadcrumbs" className="grey lighten-1">
             <div className="nav-wrapper container">
@@ -208,9 +206,6 @@ class Settings extends React.Component {
         }
 
         <div className="container">
-          <div className="row">
-            <h5>Search</h5>
-          </div>
 
           {active.answer
             && <div className="question-answer">

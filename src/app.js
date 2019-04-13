@@ -37,22 +37,23 @@ class App extends React.Component {
             <header>
               <nav>
                 <div className="nav-wrapper">
-                  <a href="#!" className="brand-logo">Logo</a>
-                  <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+                  <NavLink to={'/'} id="branding-text" className="brand-logo">
+                    <i className="material-icons">bug_report</i>Bugs
+                  </NavLink>
+
+                  <a href="#" data-target="mobile-nav" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                   <ul className="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">Javascript</a></li>
-                    <li><a href="mobile.html">Mobile</a></li>
+                    <li><Link to="/search" className="grey-text text-darken-2"><i className="material-icons left">search</i>Search</Link></li>
+                    <li><Link to="/glossary" className="grey-text text-darken-2"><i className="material-icons left">import_contacts</i>Glossary</Link></li>
+                    <li><Link to="/about" className="grey-text text-darken-2"><i className="material-icons left">info</i>About</Link></li>
                   </ul>
                 </div>
               </nav>
 
-              <ul className="sidenav" id="mobile-demo">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">Javascript</a></li>
-                <li><a href="mobile.html">Mobile</a></li>
+              <ul className="sidenav" id="mobile-nav">
+                <li><Link to="/search" className="grey-text text-darken-2"><i className="material-icons left">search</i>Search</Link></li>
+                <li><Link to="/glossary" className="grey-text text-darken-2"><i className="material-icons left">import_contacts</i>Glossary</Link></li>
+                <li><Link to="/about" className="grey-text text-darken-2"><i className="material-icons left">info</i>About</Link></li>
               </ul>
             </header>
 
