@@ -59,7 +59,8 @@ class App extends React.Component {
               </nav>
 
               <ul className="sidenav" id="mobile-nav">
-                <li><Link to="/"><i className={navIconStyle}>bug_report</i>Home</Link></li>
+                <li className="light-green sidenav-spacer"><i className="material-icons light-green-text text-darken-4">bug_report</i></li>
+                <li><Link to="/"><i className={navIconStyle}>home</i>Home</Link></li>
                 <li><Link to="/search"><i className={navIconStyle}>play_circle_filled</i>Start</Link></li>
                 <li><Link to="/glossary"><i className={navIconStyle}>import_contacts</i>Glossary</Link></li>
                 <li><Link to="/resources"><i className={navIconStyle}>info</i>Resources</Link></li>

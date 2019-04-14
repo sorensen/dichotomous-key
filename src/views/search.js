@@ -234,3 +234,5 @@ class Settings extends React.Component {
  */
 
 export default Settings
+
+// /img/Long_Lateral_Process.jpg

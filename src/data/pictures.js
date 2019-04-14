@@ -58,7 +58,7 @@ module.exports = [
     'altered': true,
   },
   {
-    'filename': 'Pronotum.jpg',
+    'filename': 'Pronotum.png',
     'license': 'cc by-sa 4.0',
     'url': 'https://commons.wikimedia.org/wiki/File:OBGtop.png',
     'author': 'Wiki Commons SwimSusan',
@@ -72,7 +72,7 @@ module.exports = [
     'altered': false,
   },
   {
-    'filename': 'Long_Lateral_Process.jpg',
+    'filename': 'Long_lateral_process.jpg',
     'license': 'cc by-nc-sa 3.0',
     'url': 'https://eol.org/media/5921820',
     'author': 'Centre for Biodiversity Genomics. CBG Photography Group. Year: 2015',
@@ -170,7 +170,7 @@ module.exports = [
     'altered': true,
   },
   {
-    'filename': 'Last_segment_swollen.jpg',
+    'filename': 'Last_Segment_Swollen.jpg',
     'license': 'cc0',
     'url': 'https://eol.org/media/8897572',
     'author': 'Public Domain; Dr. Janos Bodor',
@@ -184,7 +184,7 @@ module.exports = [
     'altered': true,
   },
   {
-    'filename': 'Noticeably_hairy.jpg',
+    'filename': 'Noticeably_Hairy.jpg',
     'license': 'cc by 2.0',
     'url': 'https://commons.wikimedia.org/wiki/File:A_caddis_fly_(NH266)_(29799954262).jpg',
     'author': 'Wiki Commons David Short',
@@ -247,7 +247,7 @@ module.exports = [
     'altered': false,
   },
   {
-    'filename': 'Costal_area.jpg',
+    'filename': 'Costal_Area.jpg',
     'license': 'cc by-sa 3.0',
     'url': 'https://commons.wikimedia.org/wiki/File:IC_Gomphidae_wing.jpg',
     'author': 'IronChris',
@@ -338,7 +338,7 @@ module.exports = [
     'altered': true,
   },
   {
-    'filename': 'Front_and_Hindwings.jpg',
+    'filename': 'Front_and_hindwings.jpg',
     'license': 'cc by 4.0',
     'url': 'https://eol.org/media/2835567',
     'author': 'Don Loarie�',
@@ -695,7 +695,7 @@ module.exports = [
     'altered': true,
   },
   {
-    'filename': 'Head_more_or_less_concealed.jpg',
+    'filename': 'Head_more_or_less_concealed.png',
     'license': 'cc by-nc 4.0',
     'url': 'http://pngimg.com/download/12175',
     'author': 'Unknown',
@@ -807,7 +807,7 @@ module.exports = [
     'altered': true,
   },
   {
-    'filename': 'Fly_larvae.jpg',
+    'filename': 'fly_larvae.jpg',
     'license': 'cc by-nc-sa 3.0',
     'url': 'https://eol.org/media/9051859',
     'author': 'Malcolm Storey',
@@ -863,7 +863,7 @@ module.exports = [
     'altered': true,
   },
   {
-    'filename': 'Opposable_mandibles.jpg',
+    'filename': 'Opposable_Mandibles.jpg',
     'license': 'cc by-sa 2.0',
     'url': 'https://commons.wikimedia.org/wiki/File:Carabid_Larva_(31572723465).jpg',
     'author': 'AJC1',
@@ -997,7 +997,7 @@ module.exports = [
     'altered': true,
   },
   {
-    'filename': 'Types_of_antennae.jpg',
+    'filename': 'Types_of_antennae.png',
     'license': 'cc by 2.5',
     'url': 'https://commons.wikimedia.org/wiki/File:Insect_antennae.svg',
     'author': 'L. Shyamal',

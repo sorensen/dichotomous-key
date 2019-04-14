@@ -25,7 +25,7 @@ class Resources extends React.Component {
             </p>
             <p>
               Bug Guide
-              <br /><a href="">https://bugguide.net</a>
+              <br /><a href="https://bugguide.net">https://bugguide.net</a>
             </p>
             <p>
               Amateur Entomologist’s Society
