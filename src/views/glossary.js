@@ -24,7 +24,7 @@ class Glossary extends React.Component {
             <div className="term-wrapper" key={term.word}>
               <NavLink id={term.word} to={`#${term.word}`}>{term.word}</NavLink>
               <blockquote>{term.definition}</blockquote>
-              <span className="term-source">Source: {term.reference}</span>
+              <span className="hidden term-source">Source: {term.reference}</span>
             </div>
           ))}
         </div>

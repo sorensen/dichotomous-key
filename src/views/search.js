@@ -6,7 +6,7 @@
  */
 
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import reactStringReplace from 'react-string-replace'
 import _ from 'underscore'
 import { debug as _debug } from 'debug'
@@ -38,6 +38,11 @@ class Settings extends React.Component {
     this.state = {
       data,
     }
+    this.goBack = this.goBack.bind(this)
+  }
+
+  goBack() {
+    this.props.history.goBack()
   }
 
   getQuestionTree(params) {
@@ -199,7 +204,7 @@ class Settings extends React.Component {
                             className="light-green darken-2 waves-effect waves-light btn-large btn-floating"
                             activeClassName="active"
                           >
-                            <i className="material-icons">check</i>
+                            <i className="material-icons">arrow_forward</i>
                           </NavLink>
                         </div>
                       </div>
@@ -210,6 +215,14 @@ class Settings extends React.Component {
               </div>
             </div>
           }
+
+          <button
+            className="light-green darken-2 waves-effect waves-light btn-large"
+            onClick={this.goBack}
+          >
+            <i className="material-icons left">arrow_back</i>
+            Back
+          </button>
         </div>
       </section>
     )

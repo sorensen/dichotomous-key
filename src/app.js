@@ -9,6 +9,8 @@ import { debug as _debug } from 'debug'
 import Home from './views/home'
 import Glossary from './views/glossary'
 import Search from './views/search'
+import Equipment from './views/equipment'
+import Resources from './views/resources'
 
 /*!
  * Styles
@@ -32,37 +34,44 @@ class App extends React.Component {
   render() {
     debug('[App.render] state=`%j`', this.state)
 
+    const navIconStyle = 'material-icons left light-green-text text-darken-4'
+
     return (
       <HashRouter basename={process.env.PUBLIC_URL}>
         <Route path="/" render={() => (
           <React.Fragment>
             <header>
               <nav className="light-green">
-                <div className="nav-wrapper">
+                <div className="nav-wrapper container">
                   <NavLink to={'/'} id="branding-text" className="brand-logo">
-                    <i className="logo-icon material-icons">bug_report</i>
-                    <span className="logo-text">Bugs</span>
+                    <i className="logo-icon material-icons light-green-text text-darken-4">bug_report</i>
+                    <span className="logo-text hide-on-small-and-down">What's Bugging You?</span>
                   </NavLink>
 
                   <a href="#" data-target="mobile-nav" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                   <ul className="right hide-on-med-and-down">
-                    <li><Link to="/search" className="grey-text text-darken-2"><i className="material-icons left">search</i>Search</Link></li>
-                    <li><Link to="/glossary" className="grey-text text-darken-2"><i className="material-icons left">import_contacts</i>Glossary</Link></li>
-                    <li><Link to="/about" className="grey-text text-darken-2"><i className="material-icons left">info</i>About</Link></li>
+                    <li><Link to="/search"><i className={navIconStyle}>play_circle_filled</i>Start</Link></li>
+                    <li><Link to="/glossary">Glossary</Link></li>
+                    <li><Link to="/resources">Resources</Link></li>
+                    <li><Link to="/equipment">Equipment</Link></li>
                   </ul>
                 </div>
               </nav>
 
               <ul className="sidenav" id="mobile-nav">
-                <li><Link to="/search" className="grey-text text-darken-2"><i className="material-icons left">search</i>Search</Link></li>
-                <li><Link to="/glossary" className="grey-text text-darken-2"><i className="material-icons left">import_contacts</i>Glossary</Link></li>
-                <li><Link to="/about" className="grey-text text-darken-2"><i className="material-icons left">info</i>About</Link></li>
+                <li><Link to="/"><i className={navIconStyle}>bug_report</i>Home</Link></li>
+                <li><Link to="/search"><i className={navIconStyle}>play_circle_filled</i>Start</Link></li>
+                <li><Link to="/glossary"><i className={navIconStyle}>import_contacts</i>Glossary</Link></li>
+                <li><Link to="/resources"><i className={navIconStyle}>info</i>Resources</Link></li>
+                <li><Link to="/equipment"><i className={navIconStyle}>build</i>Equipment</Link></li>
               </ul>
             </header>
 
             <main id="main">
               <Route path="/" exact={true} component={Home} />
               <Route path="/glossary" exact={false} component={Glossary} />
+              <Route path="/resources" exact={true} component={Resources} />
+              <Route path="/equipment" exact={true} component={Equipment} />
 
               <Route
                 path="/search/:a?/:b?/:c?/:d?/:e?/:f?/:g?/:h?/:i?/:j?/:k?/:l?/:m?/:n?/:o?/:p?/:q?/:r?/:s?/:t?/:u?/:v?/:w?/:x?/:y?/:z?"
@@ -91,7 +100,7 @@ class App extends React.Component {
               <div className="footer-copyright">
                 <div className="container">
                   © 2019 Copyright Liz Sorensen
-                  <a className="grey-text text-lighten-4 right" href="#!">More Links</a>
+                  <a className="hidden grey-text text-lighten-4 right" href="#!">More Links</a>
                 </div>
               </div>
             </footer>
