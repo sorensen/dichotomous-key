@@ -28,7 +28,18 @@ const debug = _debug('app')
 class App extends React.Component {
   constructor(props) {
     super(props)
+
     this.state = {}
+    this.sidenav = React.createRef()
+    this.onClick = this.onClick.bind(this)
+  }
+
+  onClick() {
+    const nav = window.M.Sidenav.getInstance(this.sidenav.current)
+
+    setTimeout(() => {
+      nav && nav.close()
+    }, 50)
   }
 
   render() {
@@ -58,13 +69,13 @@ class App extends React.Component {
                 </div>
               </nav>
 
-              <ul className="sidenav" id="mobile-nav">
+              <ul className="sidenav" id="mobile-nav" ref={this.sidenav}>
                 <li className="light-green sidenav-spacer"><i className="material-icons light-green-text text-darken-4">bug_report</i></li>
-                <li><Link to="/"><i className={navIconStyle}>home</i>Home</Link></li>
-                <li><Link to="/search"><i className={navIconStyle}>play_circle_filled</i>Start</Link></li>
-                <li><Link to="/glossary"><i className={navIconStyle}>import_contacts</i>Glossary</Link></li>
-                <li><Link to="/resources"><i className={navIconStyle}>info</i>Resources</Link></li>
-                <li><Link to="/equipment"><i className={navIconStyle}>build</i>Equipment</Link></li>
+                <li><Link to="/" onClick={this.onClick}><i className={navIconStyle}>home</i>Home</Link></li>
+                <li><Link to="/search" onClick={this.onClick}><i className={navIconStyle}>play_circle_filled</i>Start</Link></li>
+                <li><Link to="/glossary" onClick={this.onClick}><i className={navIconStyle}>import_contacts</i>Glossary</Link></li>
+                <li><Link to="/resources" onClick={this.onClick}><i className={navIconStyle}>info</i>Resources</Link></li>
+                <li><Link to="/equipment" onClick={this.onClick}><i className={navIconStyle}>build</i>Equipment</Link></li>
               </ul>
             </header>
 

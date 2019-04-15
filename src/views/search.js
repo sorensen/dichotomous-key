@@ -114,7 +114,7 @@ class Settings extends React.Component {
       const regex = new RegExp(name, 'i')
       if (title.match(regex)) found.push(pic)
     }
-    return found
+    return _.uniq(found)
   }
 
   renderPictures(item) {
@@ -138,6 +138,7 @@ class Settings extends React.Component {
     const { active, history } = this.state.data
     const { items } = active || {}
     const crumbs = this.getBreadcrumbs(history)
+    const usedPics = []
 
     let baseRoute = history.map(h => h.key).join('/')
     if (baseRoute) baseRoute += '/'
@@ -189,27 +190,42 @@ class Settings extends React.Component {
                 </h5>
 
                 <div className="question-wrapper">
-                  {items && items.map(item =>
-                    <div className="card" key={`question-${item.key}`}>
-                      <div className="card-content">
-                        <p className="question-title">
-                          {this.renderTitle(item.title)}
-                        </p>
+                  {items && items.map(item => {
+                    const pics = this.getPictures(item).filter(pic => !usedPics.includes(pic))
 
-                        {this.renderPictures(item)}
+                    pics.forEach(pic => usedPics.push(pic))
 
-                        <div className="question-button">
-                          <NavLink
-                            to={`/search/${baseRoute}${item.key}`}
-                            className="light-green darken-2 waves-effect waves-light btn-large btn-floating"
-                            activeClassName="active"
-                          >
-                            <i className="material-icons">arrow_forward</i>
-                          </NavLink>
+                    return (
+                      <div className="card" key={`question-${item.key}`}>
+                        <div className="card-content">
+                          <p className="question-title">
+                            {this.renderTitle(item.title)}
+                          </p>
+
+                          {!pics.length ? null : (
+                            <div className="question-pics">
+                              {pics.map(pic =>
+                                <img
+                                  key={pic.filename}
+                                  src={process.env.PUBLIC_URL + `/img/${pic.filename}`}
+                                  height={200}
+                                />
+                              )}
+                            </div>
+                          )}
+
+                          <div className="question-button">
+                            <NavLink
+                              to={`/search/${baseRoute}${item.key}`}
+                              className="light-green darken-2 waves-effect waves-light btn-large btn-floating"
+                              activeClassName="active"
+                            >
+                              <i className="material-icons">arrow_forward</i>
+                            </NavLink>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  )}
+                    )})}
 
                 </div>
               </div>
