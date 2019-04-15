@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/dichotomous-key/static/css/2.ce15d930.chunk.css"
   },
   {
-    "revision": "f91cacd0d363c99b15b5b0acb169b616",
+    "revision": "79a48e962300886057b8222c064c2042",
     "url": "/dichotomous-key/index.html"
   }
 ];
