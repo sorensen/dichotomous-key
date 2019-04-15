@@ -4,23 +4,23 @@ self.__precacheManifest = [
     "url": "/dichotomous-key/static/js/runtime~main.475713f0.js"
   },
   {
-    "revision": "ab18978f6b3d2ee74b57",
-    "url": "/dichotomous-key/static/js/main.fe5d5253.chunk.js"
+    "revision": "0299c0d30450cfad6e36",
+    "url": "/dichotomous-key/static/js/main.9f46c960.chunk.js"
   },
   {
-    "revision": "d80dde448f85f77dd0fe",
-    "url": "/dichotomous-key/static/js/2.34752ea4.chunk.js"
+    "revision": "134f362f1c3467e98ec8",
+    "url": "/dichotomous-key/static/js/2.c0b2dd1d.chunk.js"
   },
   {
-    "revision": "ab18978f6b3d2ee74b57",
+    "revision": "0299c0d30450cfad6e36",
     "url": "/dichotomous-key/static/css/main.79638c6c.chunk.css"
   },
   {
-    "revision": "d80dde448f85f77dd0fe",
+    "revision": "134f362f1c3467e98ec8",
     "url": "/dichotomous-key/static/css/2.ce15d930.chunk.css"
   },
   {
-    "revision": "6e938a0575576bcc7e0088c8c4d11990",
+    "revision": "f91cacd0d363c99b15b5b0acb169b616",
     "url": "/dichotomous-key/index.html"
   }
 ];
