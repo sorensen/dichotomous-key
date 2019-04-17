@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/dichotomous-key/precache-manifest.5e0adece2d45dda889ddecdc88e32dd3.js"
+  "/dichotomous-key/precache-manifest.0c0eed720d0c8278e8ad21abca730856.js"
 );
 
 workbox.clientsClaim();
