@@ -15,7 +15,7 @@ class Equipment extends React.Component {
       <section id="dashboard">
         <div className="container">
           <div className="row">
-            <h3>Equipment</h3>
+            <h5>Equipment</h5>
           </div>
           <div className="row">
             <p>

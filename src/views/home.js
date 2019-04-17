@@ -16,7 +16,7 @@ class Home extends React.Component {
       <section id="dashboard">
         <div className="container">
           <div className="row">
-            <h3>Welcome to “What’s Bugging You?”</h3>
+            <h5>Welcome to “What’s Bugging You?”</h5>
           </div>
           <div className="row">
             <p>
@@ -71,6 +71,7 @@ class Home extends React.Component {
             </NavLink>
           </div>
         </div>
+        <div className="row"></div>
       </section>
     )
   }

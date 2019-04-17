@@ -1,3 +1,4 @@
+/* eslint-env browser */
 
 /*!
  * Dependencies
@@ -47,8 +48,9 @@ class App extends React.Component {
 
     const navIconStyle = 'material-icons left light-green-text text-darken-4'
 
+    // <HashRouter basename={process.env.PUBLIC_URL}>
     return (
-      <HashRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter>
         <Route path="/" render={() => (
           <React.Fragment>
             <header>

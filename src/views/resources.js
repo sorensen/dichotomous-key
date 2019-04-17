@@ -15,7 +15,7 @@ class Resources extends React.Component {
       <section id="dashboard">
         <div className="container">
           <div className="row">
-            <h3>Resources</h3>
+            <h5>Resources</h5>
           </div>
           <div className="row">
             <p>

@@ -6,7 +6,7 @@
  */
 
 import React from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import reactStringReplace from 'react-string-replace'
 import _ from 'underscore'
 import { debug as _debug } from 'debug'
@@ -14,22 +14,13 @@ import './search.css'
 import questions from '../data/questions'
 import glossary from '../data/glossary'
 import pictures from '../data/pictures'
-
 const debug = _debug('views:search')
-
-const glossaryMap = _.indexBy(glossary, 'word')
-
-const pictureMap = {}
-pictures.forEach(pic => {
-  const word = pic.filename.replace(/_/g, ' ')
-  pictureMap[word] = pic
-})
 
 /**
  * Home sub-view
  */
 
-class Settings extends React.Component {
+class Search extends React.Component {
   constructor(props) {
     super(props)
 
@@ -202,17 +193,19 @@ class Settings extends React.Component {
                             {this.renderTitle(item.title)}
                           </p>
 
-                          {!pics.length ? null : (
-                            <div className="question-pics">
-                              {pics.map(pic =>
-                                <img
-                                  key={pic.filename}
-                                  src={process.env.PUBLIC_URL + `/img/${pic.filename}`}
-                                  height={200}
-                                />
-                              )}
-                            </div>
-                          )}
+                          {!pics.length
+                            ? null
+                            : (
+                              <div className="question-pics">
+                                {pics.map(pic =>
+                                  <img
+                                    key={pic.filename}
+                                    src={process.env.PUBLIC_URL + `/img/${pic.filename}`}
+                                    height={200}
+                                  />
+                                )}
+                              </div>
+                            )}
 
                           <div className="question-button">
                             <NavLink
@@ -239,6 +232,8 @@ class Settings extends React.Component {
             <i className="material-icons left">arrow_back</i>
             Back
           </button>
+          <div className="row"></div>
+          <div className="row"></div>
         </div>
       </section>
     )
@@ -249,6 +244,4 @@ class Settings extends React.Component {
  * Exports
  */
 
-export default Settings
-
-// /img/Long_Lateral_Process.jpg
+export default Search

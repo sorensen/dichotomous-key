@@ -64,6 +64,6 @@
       "allowBlockStart": true,
       "beforeLineComment": true
     }],
-    "react/prop-types": "warn"
+    "react/prop-types": 0
   }
 }

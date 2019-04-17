@@ -16,13 +16,13 @@ class Glossary extends React.Component {
   render() {
     return (
       <section id="dashboard">
-        <div className="container">
+        <div className="container" ref={this.container}>
           <div className="row">
             <h5>Glossary</h5>
           </div>
           {glossary.map(term => (
             <div className="term-wrapper" key={term.word}>
-              <NavLink id={term.word} to={`#${term.word}`}>{term.word}</NavLink>
+              <NavLink id={`/glossary/#${term.word}`} to={`#${term.word}`}>{term.word}</NavLink>
               <blockquote>{term.definition}</blockquote>
               <span className="hidden term-source">Source: {term.reference}</span>
             </div>

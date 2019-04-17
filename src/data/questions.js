@@ -122,7 +122,7 @@ const sixLegs = [
                             key: `not-caudal`,
                             items: [
                               {
-                                title: `Tarsi nearly always 5-segmented; mouthparts haustellate; hind wings reduced to halteres`,
+                                title: `Tarsi nearly always 5-segmented; mouthparts piercing-sucking or lapping-sucking; hind wings reduced to halteres`,
                                 key: `five-segments`,
                                 answer: `Order Diptera (Flies)`,
                                 summary: `Flies are everywhere! You are probably pretty familiar with many kinds, but maybe you just found one you thought was a wasp or a bee! Did you know that mosquitoes and midges are in the fly family? I hope you found out using the key! The halteres are one of the easiest ways to tell if you have a fly. Halteres are modified wings that give most Diptera the ability to be aerial acrobats (check out the glossary for more information on halteres). Dipterans are holometabolous, which means the larvae don’t look anything like the adults, and there is a pupal stage between the larval and adult stages. Metamorphosis happens during the pupal stage.`
@@ -138,7 +138,7 @@ const sixLegs = [
                                     summary: `The insects in the Order Psocoptera are mostly scavengers. When they’re outside, they like to eat lichen and fungi, but if they get inside they might eat the paste in your book bindings or the glue that holds wallpaper to walls! This doesn’t happen very often though, compared to other types of insects that like to eat starch. Psocoptera mainly live outside. They are hemimetabolous, which means the young ones (called nymphs) look like the adults, but the adults have wings.`
                                   },
                                   {
-                                    title: `Mouthparts are haustellate`,
+                                    title: `Mouthparts are piercing-sucking type`,
                                     key: `haustellate`,
                                     answer: `Order Hemiptera (Specifically Some Planthoppers and Leafhoppers)`,
                                     summary: `Planthoppers and leafhoppers can look a lot alike. They both suck sap from plants, and may pass diseases to those plants. In order to figure out which one you have, you’ll have to do some more research. Check out the Resources page to find out more! Hemipterans are hemimetabolous, which means the young ones (called nymphs) look like the adults, but the adults have wings.`
@@ -244,7 +244,7 @@ const sixLegs = [
                                     key: `other`,
                                     items: [
                                       {
-                                        title: `Mouthparts are haustellate`,
+                                        title: `Mouthparts haustellate`,
                                         key: `haustellate`,
                                         answer: `Order Hemiptera`,
                                         summary: `Did you know that all bugs are insects, but not all insects are bugs? That’s because the order Hemiptera contains the “true” bugs! But don’t be fooled: just because an insect has “bug” in its name, doesn’t mean it’s a hemipteran. Ladybugs, for example, are beetles. All hemipterans have “piercing-sucking” mouthparts. Mostly they use these mouthparts on plants, but there are some predators, and even some blood-feeders (bedbugs and kissing bugs). Many insects in this order are considered pests of plants. Hemipterans are hemimetabolous, which means the young ones (called nymphs) look like the adults, but the adults have wings. There are at least 50,000 species in this order, so you may have to do more research to find out which bug you have. Check the Resources page next!`,
@@ -322,7 +322,7 @@ const sixLegs = [
             key: `hard-wings`,
             items: [
               {
-                title: `Mouthparts are haustellate, beak elongate and usually segmented`,
+                title: `Mouthparts haustellate, beak elongate and usually segmented`,
                 key: `haustellate`,
                 answer: `Order Hemiptera`,
                 summary: `Did you know that all bugs are insects, but not all insects are bugs? That’s because the order Hemiptera contains the “true” bugs! But don’t be fooled: just because an insect has “bug” in its name, doesn’t mean it’s a hemipteran. Ladybugs, for example, are beetles. All hemipterans have “piercing-sucking” mouthparts. Mostly they use these mouthparts on plants, but there are some predators, and even some blood-feeders (bedbugs and kissing bugs). Many insects in this order are considered pests of plants. Hemipterans are hemimetabolous, which means the young ones (called nymphs) look like the adults, but the adults have wings. There are at least 50,000 species in this order, so you may have to do more research to find out which bug you have. Check the Resources page next!`,
@@ -332,7 +332,7 @@ const sixLegs = [
                 key: `mandibulate`,
                 items: [
                   {
-                    title: `Abdomen with forcepslike cerci; front wings short, leaving most of abdomen exposed; tarsi 3-segmented`,
+                    title: `Abdomen with forcepslike cerci; front wings short, leaving most of abdomen exposed; tarsi are 3-segmented`,
                     key: `forcepslike`,
                     answer: `Order Dermaptera (Earwigs)`,
                     summary: `Most earwigs have the easily recognizable forceps-like pincers called cerci. The pincers of males tend to be more curved, but both males and females can use their pincers for tasks such as grabbing things and defense. Earwigs have membranous hindwings that are thin, and have to be folded to fit under their forewings, which are short and leathery. The earwigs use their pincers to help fold up the wings! Most earwigs can fly with their hindwings, but it doesn’t happen very often (at least when a human is watching!). Earwigs are mostly omnivorous scavengers, but some are predators. They move around mostly at night, and are considered pests by most people because they include garden plants in their diets. Earwigs are good at hiding under things since they are flattened, so during the day they squeeze into tight spaces. Dermapterans are hemimetabolous, which means the young ones (called nymphs) look like the adults, but the adults have wings. Earwigs are just as likely to crawl in your ear as any other insect (which is highly unlikely), so don’t worry!`,
@@ -440,7 +440,7 @@ const sixLegs = [
                             key: `few-segments`,
                             items: [
                               {
-                                title: `Antennae distinctly longer than head; tarsi 3-segmented`,
+                                title: `Antennae distinctly longer than head; tarsi with 3 segments`,
                                 key: `long-antennae`,
                                 answer: `Order Hemiptera (Specifically Bed Bugs and Bat Bugs)`,
                                 summary: `Bed bugs are not great to have around because they feed on human blood using their piercing-sucking mouthparts. Luckily, we’re pretty sure that bed bugs don’t give diseases to humans, but many people are allergic to them. Bat bugs look a lot like bed bugs, but mostly eat the blood of bats. They will bite humans if they get the chance, though. If you’ve found one of these little guys, let someone know! You definitely don’t want them in your house. Bed and bat bugs are hemimetabolous, which means the young ones (called nymphs) look like the adults, but the adults have wings.`,
@@ -468,7 +468,7 @@ const sixLegs = [
                                 key: `five-segments`,
                                 items: [
                                   {
-                                    title: `Body is covered with scales; beak usually in form of coiled tube; antennae long and many-segmented`,
+                                    title: `Body is covered with scales; beak usually in form of coiled tube; antennae long and with many segments`,
                                     key: `scales`,
                                     answer: `Order Lepidoptera (Specifically Wingless Moths)`,
                                     summary: `Wingless moths are not all wingless- just the females are. So, if you found a wingless moth, it may not be too hard to figure out its genus and species. Check the Resources page for your next step! Moths are holometabolous, which means the larvae don’t look anything like the adults, and there is a pupal stage between the larval and adult stages.`,
@@ -486,7 +486,7 @@ const sixLegs = [
                                 key: `few-segments`,
                                 items: [
                                   {
-                                    title: `Mouthparts in form of cone located basally on ventral side of head; palps present but short; body elongate, usually less than 5mm in length; antennae about as long as head and prothorax combined, not bristlelike, 4- to 9-segmented; tarsi 1- or 2-segmented, often without claws`,
+                                    title: `Mouthparts in form of cone located basally on ventral side of head; palps present but short; body elongate, usually less than 5mm in length; antennae about as long as head and prothorax combined, not bristlelike, 4- to 9-segmented; tarsi with 1 or 2 segments, often without claws`,
                                     key: `cone-mouth`,
                                     answer: `Order Thysanoptera (Thrips)`,
                                     summary: `Thrips have “hairy” wings, which are not very good for flying. Thrips are tiny insects, and mostly feed on plants by sucking up the sap. Thrips are considered pests because they can give diseases to the plants they feed on. However, some thrips are pollinators, and others are actually predators of other insects. Thysanoptera are hemimetabolous, which means the young ones (called nymphs) look like the adults, but the adults have wings.`,
@@ -556,7 +556,7 @@ const sixLegs = [
                                                 key: `labium-normal`,
                                                 items: [
                                                   {
-                                                    title: `With 3 caudal filaments; 1 tarsal claw; gills located on lateral margins of abdominal terga, usually leaflike or platelike`,
+                                                    title: `With 3 long caudal filaments; 1 tarsal claw; gills located on lateral margins of abdominal terga, usually leaflike or platelike`,
                                                     key: `three-caudal`,
                                                     answer: `Order Ephemeroptera (Specifically Nymphs; Mayflies)`,
                                                     summary: `Nymphs of this order (technically naiads) use gills to breathe when the water they live in doesn’t have a lot of oxygen, but if there is enough oxygen, they may absorb it through their skin. Mayfly nymphs molt many times before becoming subimagos (winged juveniles) and then adults. They can live for over a year in nymphal stages. The nymphs of most species are herbivores, eating algae and other plants in the water, but some species are predators of small aquatic arthropods and their larvae.`,
@@ -596,7 +596,7 @@ const sixLegs = [
                                                     key: `short-mouth`,
                                                     items: [
                                                       {
-                                                        title: `Tarsi with 2 claws; abdomen with long slender lateral processes and a long slender terminal process or with slender lateral processes and a pair of hooklike structures apically`,
+                                                        title: `Tarsi with 2 tarsal claws; abdomen with long slender lateral processes and a long slender terminal process or with slender lateral processes and a pair of hooklike structures apically`,
                                                         key: `two-claws`,
                                                         answer: `Order Neuroptera (Specifically Larvae; Fishflies and Alderflies)`,
                                                         summary: `Fishfly larvae may be predators or omnivores. They have very strong mandibles, which they can use to pinch you, so be careful when you handle them! Fishflies use gills to breathe underwater, but may also absorb oxygen through their skin. Fishflies pupate on land. Alderfly larvae can also pinch you with their strong mandibles, so look out! These larvae are predators, and also use gills to breathe, like the fishfly larvae.`,
@@ -636,7 +636,7 @@ const sixLegs = [
                                             key: `mouth-withdrawn`,
                                             items: [
                                               {
-                                                title: `Antennae long, many-segmented; abdomen with at least 9 segments, with stylelike appendages on ventral side of some segments; without forked appendage near end of abdomen, but with well-developed cerci`,
+                                                title: `Antennae long, with many segments; abdomen with at least 9 segments, with stylelike appendages on ventral side of some segments; without forked appendage near end of abdomen, but with well-developed cerci`,
                                                 key: `antennae-long`,
                                                 answer: `Order Diplura (rare)`,
                                                 summary: `These insects are rare mostly because they’re so small! They live in damp leaf litter, and moist soil, so they can be hard to find. Some species have the long cerci, like in the picture, and are plant eaters. Others have cerci that are forcepslike, and they are usually predators. Some species are omnivorous. Diplurans are ametabolous, which means they just eventually molt into the adult stage.`,
@@ -682,7 +682,7 @@ const sixLegs = [
                                                             key: `mouth-other`,
                                                             items: [
                                                               {
-                                                                title: `Antennae 5-segmented; found mainly in Texas`,
+                                                                title: `Antennae have 5 segments; found mainly in Texas`,
                                                                 key: `antennae-five`,
                                                                 answer: `Order Strepsiptera (Specifically Some Female Twisted-Wing Parasites; Rare)`,
                                                                 summary: `These rare insects are only found in Texas.`,
@@ -748,7 +748,7 @@ const sixLegs = [
                                                                 summary: `Phasmatodea are also called walking sticks. Walking sticks are usually long and slender, but the ones in the genus Timema are stouter. Due to their forcepslike cerci, they almost look like earwigs. Like other Phasmids, Timema are nocturnal herbivores. Unlike other Phasmids, they have 3 tarsal segments vs. the normal 5. Timema have so far only been found on the west coast of North America, in California mostly. If you found a Timema phasmid, that’s awesome!`,
                                                               },
                                                               {
-                                                                title: `Antennae usually less than half as long as body; cerci long; widely distributed`,
+                                                                title: `Antennae usually less than half as long as body; forcepslike cerci long; widely distributed`,
                                                                 key: `antennae-short`,
                                                                 answer: `Order Dermaptera (Earwigs)`,
                                                                 summary: `Most earwigs have the easily recognizable forceps-like pincers called cerci. The pincers of males tend to be more curved, but both males and females can use their pincers for tasks such as grabbing things and defense. Earwigs have membranous hindwings that are thin, and have to be folded to fit under their forewings, which are short and leathery. The earwigs use their pincers to help fold up the wings! Most earwigs can fly with their hindwings, but it doesn’t happen very often (at least when a human is watching!). Earwigs are mostly omnivorous scavengers, but some are predators. They move around mostly at night, and are considered pests by most people because they include garden plants in their diets. Earwigs are good at hiding under things since they are flattened, so during the day they squeeze into tight spaces. Dermapterans are hemimetabolous, which means the young ones (called nymphs) look like the adults, but the adults have wings. Earwigs are just as likely to crawl in your ear as any other insect (which is highly unlikely), so don’t worry!`,
@@ -760,7 +760,7 @@ const sixLegs = [
                                                             key: `not-forcepslike`,
                                                             items: [
                                                               {
-                                                                title: `Tarsi 3-segmented, basal segment of front tarsi enlarged`,
+                                                                title: `Tarsi with 3 segments, basal segment of front tarsi enlarged`,
                                                                 key: `three-segments`,
                                                                 answer: `Order Embiidina (Webspinners)`,
                                                                 summary: `Webspinners use the silk they spin to make “galleries” that they live in. In their galleries they are protected from predators among other things. A gallery usually has more than just one webspinner in it. The females lay their eggs in the gallery, and take care of them for a little while after they hatch. Webspinners eat plants, except for the adult males, which don’t eat at all. The males die quickly, so they leave the gallery as soon as they can to find a mate. If you’ve found a webspinner, good job! They are pretty rare. Webspinners are hemimetabolous, which means the young ones (called nymphs) look like the adults, but the adults have wings.`,
@@ -780,7 +780,7 @@ const sixLegs = [
                                                                     key: `not-grasshopper`,
                                                                     items: [
                                                                       {
-                                                                        title: `Tarsi 4-segmented; pale, soft-bodied, wood- or ground-inhabiting insects`,
+                                                                        title: `Tarsi 4-segmented; pale, have soft bodies, wood- or ground-inhabiting insects`,
                                                                         key: `four-segments`,
                                                                         answer: `Order Isoptera (Termites)`,
                                                                         summary: `You can easily tell the difference between a termite and an ant, because termites don’t have a constricted waist (see Hymenoptera). Termites are “eusocial” insects, and live in large colonies. The term eusocial means that the castes (workers, soldiers, kings, and queens) all look different, even if they’re the same species. It also means that they take care of their young, and defend their colonies (among other things!). Termites eat cellulose, so that means that they often eat wood, but it can also be other types of plant material. Termites are actually very important for ecosystems, even though they are considered pests when they’re in our houses. Some termites make nests, and some live underground in mounds. But they’ll always be found in warm areas, because they are considered “soft” bodied, which means they freeze easily. Isoptera are hemimetabolous, which means the young ones (called nymphs) look like the adults, but the adults have wings. Development is complicated in this order, though, due to the different castes.`,
@@ -790,13 +790,13 @@ const sixLegs = [
                                                                         key: `few-segments`,
                                                                         items: [
                                                                           {
-                                                                            title: `Cerci present, 1-segmented, terminating in long bristle; antennae 9-segmented, moniliform; compound eyes and ocelli absent; tarsi 2-segmented`,
+                                                                            title: `Cerci are present, 1-segmented, terminating in long bristle; antennae 9-segmented, moniliform; compound eyes and ocelli absent; tarsi 2-segmented`,
                                                                             key: `cerci`,
                                                                             answer: `Order Zoraptera (Angel Insects)`,
                                                                             summary: `These little guys are very rare, so if you found one, congratulations! There are only 44 species that we know of, in one genus: Zorotypus. Zorapterans live in colonies in or under rotting wood, and mainly eat fungal spores and dead plant material. Sometimes they are hunters of other tiny insects and mites.`,
                                                                           },
                                                                           {
-                                                                            title: `Cerci absent; antennae with 13 or more segments, usually long and hairlike; compound eyes and 3 ocelli usually present; tarsi 2-segmented or 3-segmented`,
+                                                                            title: `Cerci absent; antennae with 13 or more segments, usually long and hairlike; compound eyes and 3 ocelli usually present; 2 or 3 tarsal segments`,
                                                                             key: `no-cerci`,
                                                                             answer: `Order Psocoptera (Booklice and Barklice)`,
                                                                             summary: `The insects in the Order Psocoptera are mostly scavengers. When they’re outside, they like to eat lichen and fungi, but if they get inside they might eat the paste in your book bindings or the glue that holds wallpaper to walls! This doesn’t happen very often though, compared to other types of insects that like to eat starch. Psocoptera mainly live outside. They are hemimetabolous, which means the young ones (called nymphs) look like the adults, but the adults have wings.`,
@@ -822,7 +822,7 @@ const sixLegs = [
                                                         key: `ventral`,
                                                         items: [
                                                           {
-                                                            title: `With 5 pairs of prolegs (on abdominal segments 3-6 and 10) or fewer, prolegs with tiny hooks (crochets); several (usually 6) stemmata on each side of head`,
+                                                            title: `With 5 proleg pairs (on abdominal segments 3-6 and 10) or fewer, prolegs with tiny hooks (crochets); several (usually 6) stemmata on each side of head`,
                                                             key: `five-pairs`,
                                                             answer: `Order Lepidoptera (Specifically Caterpillars/Larvae of Moths and Butterflies)`,
                                                             summary: `The larvae of insects in the order Lepidoptera are commonly called caterpillars. Be careful, though, because the larvae of some other insects (such as sawflies) are also called caterpillars. Almost all of the Lepidopteran larvae are herbivores. Some may feed on animal products though, such as wool. Many lepidopteran larvae are considered pests, not only because of what they eat, but because they eat a lot! Lepidopteran larvae have soft bodies, and come in many shapes and sizes. Some are brightly colored or have ornamentations (like spines) to warn predators away from them. Others are dull colored or may be mottled to blend in with their environment. Most of the time the butterfly or moth that comes from a caterpillar looks completely different than the coloring would suggest. Although some larvae are very distinctive and can be associated with their adult form, others are not. So if you found a caterpillar that’s a moth or butterfly larvae, you should hang onto it until it turns into an adult to see what you get!`,
@@ -852,7 +852,7 @@ const sixLegs = [
                                                         key: `abdominal`,
                                                         items: [
                                                           {
-                                                            title: `Mandible and maxilla on each side united to form sucking jaw that is often long; with 2 tarsal claws; labrum absent or fused with head capsule; maxillary palps absent`,
+                                                            title: `Mandible and maxilla on each side united to form sucking jaw that is often long; with 2 tarsal claws; labrum is absent or fused with head capsule; maxillary palps absent`,
                                                             key: `mandible-sides`,
                                                             answer: `Order Neuroptera (Specifically Larvae of Antlions and Lacewings)`,
                                                             summary: `Larvae of antlions and lacewings are predators. Their specialized jaws are able to suck the juices out of their prey. Antlions actually inject venom into their prey, which paralyzes and digests the inside of it before it is sucked out. Antlion larvae build pit traps for its prey. When the prey walks by it often falls into the pit and the waiting jaws of the antlion. Antlions don’t move around very well outside of their pits, and have the nickname “doodlebug” because of the meandering paths they take.`,
@@ -866,13 +866,13 @@ const sixLegs = [
                                                                 key: `prognathous`,
                                                                 items: [
                                                                   {
-                                                                    title: `Tarsi with 1 claw`,
+                                                                    title: `1 tarsal claw`,
                                                                     key: `one-claw`,
                                                                     answer: `Order Coleoptera (Specifically Larvae; Beetles)`,
                                                                     summary: `The coleopteran larvae are just as diverse as the adults. Beyond a few easily recognizable larvae (like white grubs and lady beetles), there aren’t many defining features that will tell you what kind of beetle your larva will turn into. Take note of its habitat and the time of year you found it, and then check out the Resources page to keep looking!`,
                                                                   },
                                                                   {
-                                                                    title: `Tarsi with 2 claws`,
+                                                                    title: `2 tarsal claws`,
                                                                     key: `two-claws`,
                                                                     items: [
                                                                       {
@@ -912,7 +912,7 @@ const sixLegs = [
                                                                         summary: `The coleopteran larvae are just as diverse as the adults. Beyond a few easily recognizable larvae (like white grubs or lady beetles), there aren’t many defining features that will tell you what kind of beetle your larva will turn into. Take note of its habitat and the time of year you found it, and then check out the Resources page to keep looking!`,
                                                                       },
                                                                       {
-                                                                        title: `Tarsi usually with 3 claws; abdomen with 2 caudal filaments about one third as long as body; antennae usually short, 3-segmented`,
+                                                                        title: `Tarsi usually with 3 claws; abdomen with 2 caudal filaments about one third as long as body; antennae usually short, with 3 segments`,
                                                                         key: `three-claws`,
                                                                         answer: `Order Coleoptera or Strepsiptera (Specifically Triungulin Larvae)`,
                                                                         summary: `Triungulin larvae get the name from their 3 tarsal claws. They are special in another way, though, and are very rare. These larvae are parasites, and they are able to move around very well to find their hosts, which will usually be bees. Triungulin larvae of the blister beetle, for example, will either be carried by an adult, or crawl on its own to the nest of a bee and eat the bee larvae and the food in its cell. The larvae will then molt to a grub that looks more typical of beetle larvae.`,
@@ -952,7 +952,7 @@ const sixLegs = [
             key: `wormlike`,
             items: [
               {
-                title: `Aquatic`,
+                title: `Is Aquatic`,
                 key: `aquatic`,
                 answer: `Order Diptera (Specifically Aquatic Larvae of Flies)`,
                 summary: `There are several families of Diptera that have aquatic larvae, such as crane flies and mosquitoes. Most aquatic larvae are very similar, so put yours in a jar with some water and check out the Resources page to see if you can learn more about it!`,
@@ -962,7 +962,7 @@ const sixLegs = [
                 key: `terrestrial`,
                 items: [
                   {
-                    title: `Sessile, plant feeding; body covered by a scale or waxy material; mouthparts haustellate, long and threadlike`,
+                    title: `Sessile, plant feeding; body covered by a scale or waxy material; haustellate mouthparts, long and threadlike`,
                     key: `plant-feeding`,
                     answer: `Order Hemiptera (Specifically Female Scale Insects)`,
                     summary: `Female scale insects are covered by… you guessed it: a scale! The scale is just a protective covering for the insect underneath, though. You might not even know there’s an insect under there if you don’t look. Female scale insects live under their scale for their whole live. When a female egg hatches, the larva can move around. It makes its way to a good spot on a plant, then molts, losing its legs. Since the males have legs and wings, when it’s time to mate, they find the female.`,

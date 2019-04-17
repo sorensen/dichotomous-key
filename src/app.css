@@ -7,7 +7,7 @@ body {
 
 main {
   flex: 1 0 auto;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
 }
 
 .hidden {

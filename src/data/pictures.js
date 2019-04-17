@@ -718,7 +718,7 @@ module.exports = [
     'altered': true,
   },
   {
-    'filename': 'soft-bodied.jpg',
+    'filename': 'have_soft_bodies.jpg',
     'license': 'cc by-nc-sa 4.0',
     'url': 'https://eol.org/media/2814781',
     'author': 'Juan Cruzado Cort̩s',
@@ -773,13 +773,14 @@ module.exports = [
     'author': 'NTNU Museum of Natural History and Archaeology. NTNU Museum of Natural History and Archaeology. Year: 2011.',
     'altered': true,
   },
-  {
-    'filename': 'Tarsi_with_2_claws.jpg',
-    'license': 'cc by-sa 2.0',
-    'url': 'https://www.flickr.com/photos/coleoptera-us/29131983133',
-    'author': 'Udo Schmidt',
-    'altered': true,
-  },
+
+  // {
+  //   'filename': 'Tarsi_with_2_claws.jpg',
+  //   'license': 'cc by-sa 2.0',
+  //   'url': 'https://www.flickr.com/photos/coleoptera-us/29131983133',
+  //   'author': 'Udo Schmidt',
+  //   'altered': true,
+  // },
   {
     'filename': 'Distinct_labrum.jpg',
     'license': 'cc by-nd-nc 1.0',
@@ -1010,4 +1011,37 @@ module.exports = [
   //   'author': 'L. Shyamal',
   //   'altered': false,
   // },
+  {
+    filename: 'lapping-sucking.jpg',
+  },
+  {
+    filename: 'piercing-sucking.jpg',
+  },
+  {
+    filename: 'piercing-sucking_type.jpg',
+  },
+  {
+    filename: 'mouthparts_are_mandibulate.jpg',
+  },
+  {
+    filename: 'without_claws.jpg',
+  },
+  {
+    filename: 'slender_terminal.jpg',
+  },
+  {
+    filename: 'pointed_structures.jpg',
+  },
+  {
+    filename: 'united_to_form.jpg',
+  },
+  {
+    filename: 'is_aquatic.jpg',
+  },
+  {
+    filename: 'membranous_area.jpg',
+  },
+  {
+    filename: 'without_caudal_filaments.jpg',
+  },
 ]
